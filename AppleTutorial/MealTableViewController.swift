@@ -101,10 +101,8 @@ class MealTableViewController: CoreDataTableViewController, UISearchBarDelegate 
     @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
         if let svc = sender.source as? MealViewController {
             
-            if let meal = NSEntityDescription.insertNewObject(forEntityName: "Meal", into: (fetchedResultsController?.managedObjectContext)!) as? Meal {
-                meal.name = svc.nameTextField.text
-                meal.rating = Int16(svc.ratingControl.rating)
-                meal.photo = UIImagePNGRepresentation(svc.photoImageView.image!) as NSData?
+            if let _ = tableView.indexPathForSelectedRow {
+                
                 fetchedResultsController?.managedObjectContext.perform({
                     
                     do {
@@ -114,7 +112,27 @@ class MealTableViewController: CoreDataTableViewController, UISearchBarDelegate 
                     }
                     
                 })
+                
+
+            } else {
+                
+                if let meal = NSEntityDescription.insertNewObject(forEntityName: "Meal", into: (fetchedResultsController?.managedObjectContext)!) as? Meal {
+                    meal.name = svc.nameTextField.text
+                    meal.rating = Int16(svc.ratingControl.rating)
+                    meal.photo = UIImagePNGRepresentation(svc.photoImageView.image!) as NSData?
+                    fetchedResultsController?.managedObjectContext.perform({
+                        
+                        do {
+                            try self.fetchedResultsController?.managedObjectContext.save()
+                        } catch let Error {
+                            print("Could not save to core data \(Error)");
+                        }
+                        
+                    })
+                }
+                
             }
+            
         }
         print("from unwind")
     }

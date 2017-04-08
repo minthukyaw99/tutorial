@@ -45,5 +45,12 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Please Allow To Access</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Please Allow To Access </string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
