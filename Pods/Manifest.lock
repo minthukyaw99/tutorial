@@ -5,20 +5,26 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - FontAwesome.swift (1.0.0)
+  - FontAwesome.swift (1.1.1)
+  - PKHUD (4.2.1)
+  - QRCodeReader.swift (7.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireImage (~> 3.1)
   - ChameleonFramework/Swift
   - FontAwesome.swift
+  - PKHUD (~> 4.0)
+  - QRCodeReader.swift (~> 7.4.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  FontAwesome.swift: 2d32a3d62195343c2004b7c9043294ed2948553a
+  FontAwesome.swift: f4ff5a9199dc3b510eba5bb377e834f159aef358
+  PKHUD: 957ce2a68b3c97a51839b30216120c1dbc0c3a78
+  QRCodeReader.swift: 759a4320cd9005ecc94abdb4aaf0eb72fcd359d0
 
-PODFILE CHECKSUM: e5e380f716437f5a87ce0cc5fe76ed39c46e594f
+PODFILE CHECKSUM: edb2f3c68f38856ca03bc8f3d44a91bae51c8918
 
 COCOAPODS: 1.2.0
